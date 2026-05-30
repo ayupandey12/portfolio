@@ -171,8 +171,6 @@ export default function Home() {
           </p>
 
           <div className="hero-contact-row">
-            <span>Kanpur, UP</span>
-            <span className="dot-sep">•</span>
             <a href="tel:+918910832020">+91 8910832020</a>
             <span className="dot-sep">•</span>
             <a href="mailto:ayushpandey9802@gmail.com">ayushpandey9802@gmail.com</a>
