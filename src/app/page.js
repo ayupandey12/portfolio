@@ -123,13 +123,17 @@ export default function Home() {
   // Contact form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formName || !formMessage) {
+    if (!formName.trim() || !formMessage.trim()) {
       setFormStatus("Please fill in all fields.");
       return;
     }
-    setFormStatus("Message sent successfully! (Demo)");
-    setFormName("");
-    setFormMessage("");
+
+    const subject = encodeURIComponent(`Message from ${formName}`);
+    const body = encodeURIComponent(formMessage);
+    const mailto = `mailto:ayushpandey9802@gmail.com?subject=${subject}&body=${body}`;
+
+    setFormStatus("Opening your mail client...");
+    window.location.href = mailto;
     setTimeout(() => setFormStatus(""), 4000);
   };
 
