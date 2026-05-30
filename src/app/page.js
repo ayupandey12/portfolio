@@ -133,7 +133,10 @@ export default function Home() {
     const mailto = `mailto:ayushpandey9802@gmail.com?subject=${subject}&body=${body}`;
 
     setFormStatus("Opening your mail client...");
-    window.location.href = mailto;
+    const opened = window.open(mailto, "_blank");
+    if (!opened) {
+      window.location.href = mailto;
+    }
     setTimeout(() => setFormStatus(""), 4000);
   };
 
