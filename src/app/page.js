@@ -153,7 +153,7 @@ export default function Home() {
               <div className="polaroid">
                 <div className="polaroid-img-wrapper">
                   <Image
-                    src="/avatar_sketch.png"
+                    src="/PXL_20250507_114752846.jpg.jpeg"
                     alt="Ayush Pandey Sketch Avatar"
                     fill
                     sizes="96px"
