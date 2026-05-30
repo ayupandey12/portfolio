@@ -68,10 +68,10 @@ const TESTIMONIALS = [
     avatar: "M",
   },
   {
-    name: "NiftyBull Client",
-    role: "Product Owner",
-    text: "Ayush engineered a highly responsive trading panel with live candlestick rendering. The performance is incredibly fast, achieving sub-millisecond execution times in local tests.",
-    avatar: "NB",
+    name: "Kojoy Team",
+    role: "Business Director",
+    text: "Ayush built and deployed our SEO optimized business site. His clean design and page speed updates increased organic search traffic by 30% within weeks.",
+    avatar: "K",
   },
 ];
 
@@ -169,13 +169,21 @@ export default function Home() {
           <p className="hero-bio">
             Full-Stack Engineer with expertise in distributed systems and scalable web architecture. Built real-time applications using Turborepo and Edge Computing, resulting in a 52% increase in system throughput. Engineered automated deployment pipelines using Docker and GitHub Actions on AWS infrastructure.
           </p>
+
+          <div className="hero-contact-row">
+            <span>Kanpur, UP</span>
+            <span className="dot-sep">•</span>
+            <a href="tel:+918910832020">+91 8910832020</a>
+            <span className="dot-sep">•</span>
+            <a href="mailto:ayushpandey9802@gmail.com">ayushpandey9802@gmail.com</a>
+          </div>
         </div>
       </section>
 
       {/* SOCIALS GRID */}
       <div className="socials-grid">
         <a
-          href="https://github.com"
+          href="https://github.com/ayupandey12"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
@@ -186,7 +194,7 @@ export default function Home() {
           </svg>
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/ayush-pandey-351509263/"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
@@ -197,19 +205,18 @@ export default function Home() {
           </svg>
         </a>
         <a
-          href="https://leetcode.com"
+          href="https://leetcode.com/u/Anonymous_x101/"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
           aria-label="LeetCode"
         >
-          {/* Custom Leetcode SVG Icon */}
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-9.75 9.75a1.37 1.37 0 0 0-.006 1.937l3.287 3.287a1.37 1.37 0 0 0 1.937-.006l9.748-9.75a1.375 1.375 0 0 0-.925-2.348h-3.33zm-.006 4.43h2.381l-7.393 7.393-1.19-1.19 6.202-6.203zM4.478 15.3l-2.054-2.054a1.37 1.37 0 0 0-1.937.006 1.37 1.37 0 0 0-.006 1.937l2.054 2.054a1.37 1.37 0 0 0 1.937-.006 1.37 1.37 0 0 0 .006-1.937zM16.645 13.064c-.37 0-.74-.141-1.022-.422a1.442 1.442 0 0 1 0-2.044l1.375-1.375a1.446 1.446 0 0 1 2.044 0c.563.564.563 1.48 0 2.044l-1.375 1.375c-.282.28-.65.422-1.022.422zM21.946 20.365a1.37 1.37 0 0 0-.006-1.937l-3.287-3.287a1.37 1.37 0 0 0-1.937.006 1.37 1.37 0 0 0 .006 1.937l3.287 3.287a1.37 1.37 0 0 0 1.937-.006z" />
           </svg>
         </a>
         <a
-          href="https://x.com"
+          href="https://x.com/ayu_dev1"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
@@ -220,7 +227,7 @@ export default function Home() {
           </svg>
         </a>
         <a
-          href="mailto:ayushpandey8020@gmail.com"
+          href="mailto:ayushpandey9802@gmail.com"
           className="social-link"
           aria-label="Email"
         >
@@ -233,110 +240,32 @@ export default function Home() {
 
       {/* PROJECTS SECTION */}
       <section className="projects-container">
-        {/* Project 1: Gupshup */}
+        {/* Project 1: BlogBook */}
         <a
-          href="https://github.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-row"
-        >
-          <div className="project-img-container">
-            {/* SVG: Gupshup Chat Editor in dark theme */}
-            <svg width="96" height="64" viewBox="0 0 96 64" fill="none">
-              <rect width="96" height="64" fill="#0d0e12" />
-              <rect x="8" y="8" width="80" height="48" rx="4" fill="#161822" />
-              <circle cx="16" cy="16" r="2" fill="#10b981" />
-              <rect x="22" y="14" width="24" height="4" rx="2" fill="#3b82f6" />
-              {/* Chat bubbles */}
-              <rect x="16" y="24" width="40" height="10" rx="3" fill="#1e293b" />
-              <circle cx="22" cy="29" r="2" fill="#38bdf8" />
-              <rect x="28" y="28" width="22" height="2" rx="1" fill="#94a3b8" />
-              
-              <rect x="40" y="38" width="40" height="10" rx="3" fill="#3b82f6" fillOpacity="0.4" />
-              <circle cx="74" cy="43" r="2" fill="#60a5fa" />
-              <rect x="46" y="42" width="22" height="2" rx="1" fill="#ffffff" />
-            </svg>
-          </div>
-          <div className="project-details">
-            <div className="project-header-row">
-              <span className="project-title">Gupshup</span>
-              <span className="project-tag">WebSockets</span>
-            </div>
-            <p className="project-desc">
-              Real-time chat via Turborepo with 3 independent scaling microservices.
-            </p>
-          </div>
-          <div className="project-arrow-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </div>
-        </a>
-
-        {/* Project 2: PayNow */}
-        <a
-          href="https://github.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-row"
-        >
-          <div className="project-img-container">
-            {/* SVG: PayNow card transaction in dark theme */}
-            <svg width="96" height="64" viewBox="0 0 96 64" fill="none">
-              <rect width="96" height="64" fill="#0c0a09" />
-              {/* Bank card card structure */}
-              <rect x="12" y="14" width="72" height="36" rx="4" fill="#292524" stroke="#44403c" strokeWidth="1" />
-              {/* Card details */}
-              <rect x="18" y="20" width="12" height="8" rx="1" fill="#f59e0b" />
-              <rect x="18" y="38" width="30" height="2" rx="1" fill="#d6d3d1" />
-              <circle cx="62" cy="32" r="6" fill="#ef4444" fillOpacity="0.8" />
-              <circle cx="70" cy="32" r="6" fill="#eab308" fillOpacity="0.8" />
-            </svg>
-          </div>
-          <div className="project-details">
-            <div className="project-header-row">
-              <span className="project-title">PayNow</span>
-              <span className="project-tag">Fintech</span>
-            </div>
-            <p className="project-desc">
-              Dockerized fintech wallet. Ensured transactional ACID compliance.
-            </p>
-          </div>
-          <div className="project-arrow-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </div>
-        </a>
-
-        {/* Project 3: BlogBook */}
-        <a
-          href="https://github.com"
+          href="https://blogbook-eight.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="project-row"
         >
           <div className="project-img-container">
             {/* SVG: Serverless network for BlogBook */}
-            <svg width="96" height="64" viewBox="0 0 96 64" fill="none">
-              <rect width="96" height="64" fill="#0f172a" />
+            <svg width="110" height="72" viewBox="0 0 110 72" fill="none">
+              <rect width="110" height="72" fill="#0f172a" />
               {/* Edge servers cloud logo style */}
-              <circle cx="48" cy="32" r="14" fill="#f97316" fillOpacity="0.15" stroke="#f97316" strokeWidth="1.5" />
-              <path d="M48 24 L48 40 M40 32 L56 32" stroke="#ea580c" strokeWidth="1.5" />
+              <circle cx="55" cy="36" r="15" fill="#f97316" fillOpacity="0.15" stroke="#f97316" strokeWidth="1.5" />
+              <path d="M55 27 L55 45 M46 36 L64 36" stroke="#ea580c" strokeWidth="1.5" />
               {/* Surrounding nodes */}
-              <circle cx="24" cy="18" r="3" fill="#38bdf8" />
-              <line x1="24" y1="18" x2="38" y2="26" stroke="#475569" strokeWidth="1" strokeDasharray="2 2" />
+              <circle cx="28" cy="20" r="3" fill="#38bdf8" />
+              <line x1="28" y1="20" x2="43" y2="29" stroke="#475569" strokeWidth="1" strokeDasharray="2 2" />
               
-              <circle cx="72" cy="18" r="3" fill="#38bdf8" />
-              <line x1="72" y1="18" x2="58" y2="26" stroke="#475569" strokeWidth="1" strokeDasharray="2 2" />
+              <circle cx="82" cy="20" r="3" fill="#38bdf8" />
+              <line x1="82" y1="20" x2="67" y2="29" stroke="#475569" strokeWidth="1" strokeDasharray="2 2" />
               
-              <circle cx="24" cy="46" r="3" fill="#38bdf8" />
-              <line x1="24" y1="46" x2="38" y2="38" stroke="#475569" strokeWidth="1" strokeDasharray="2 2" />
+              <circle cx="28" cy="52" r="3" fill="#38bdf8" />
+              <line x1="28" y1="52" x2="43" y2="43" stroke="#475569" strokeWidth="1" strokeDasharray="2 2" />
 
-              <circle cx="72" cy="46" r="3" fill="#38bdf8" />
-              <line x1="72" y1="46" x2="58" y2="38" stroke="#475569" strokeWidth="1" strokeDasharray="2 2" />
+              <circle cx="82" cy="52" r="3" fill="#38bdf8" />
+              <line x1="82" y1="52" x2="67" y2="43" stroke="#475569" strokeWidth="1" strokeDasharray="2 2" />
             </svg>
           </div>
           <div className="project-details">
@@ -356,43 +285,113 @@ export default function Home() {
           </div>
         </a>
 
-        {/* Project 4: NiftyBull */}
+        {/* Project 2: Gupshup */}
         <a
-          href="https://github.com"
+          href="https://gupshup-web.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="project-row"
         >
           <div className="project-img-container">
-            {/* SVG: Candlestick chart for NiftyBull */}
-            <svg width="96" height="64" viewBox="0 0 96 64" fill="none">
-              <rect width="96" height="64" fill="#09050d" />
-              <rect x="0" y="0" width="96" height="64" stroke="#1d122c" strokeWidth="2" />
-              {/* Candlesticks */}
-              {/* Box 1 */}
-              <line x1="22" y1="20" x2="22" y2="50" stroke="#10b981" strokeWidth="1.5" />
-              <rect x="18" y="28" width="8" height="14" rx="1" fill="#10b981" />
+            {/* SVG: Gupshup Chat Editor in dark theme */}
+            <svg width="110" height="72" viewBox="0 0 110 72" fill="none">
+              <rect width="110" height="72" fill="#0d0e12" />
+              <rect x="10" y="8" width="90" height="56" rx="4" fill="#161822" />
+              <circle cx="18" cy="16" r="2.5" fill="#10b981" />
+              <rect x="25" y="14" width="30" height="4" rx="2" fill="#3b82f6" />
+              {/* Chat bubbles */}
+              <rect x="18" y="26" width="45" height="12" rx="3" fill="#1e293b" />
+              <circle cx="25" cy="32" r="2" fill="#38bdf8" />
+              <rect x="32" y="31" width="24" height="2" rx="1" fill="#94a3b8" />
               
-              {/* Box 2 */}
-              <line x1="42" y1="10" x2="42" y2="40" stroke="#ef4444" strokeWidth="1.5" />
-              <rect x="38" y="16" width="8" height="18" rx="1" fill="#ef4444" />
-              
-              {/* Box 3 */}
-              <line x1="62" y1="15" x2="62" y2="55" stroke="#10b981" strokeWidth="1.5" />
-              <rect x="58" y="20" width="8" height="25" rx="1" fill="#10b981" />
-
-              {/* Box 4 */}
-              <line x1="82" y1="5" x2="82" y2="35" stroke="#ef4444" strokeWidth="1.5" />
-              <rect x="78" y="12" width="8" height="15" rx="1" fill="#ef4444" />
+              <rect x="45" y="44" width="45" height="12" rx="3" fill="#3b82f6" fillOpacity="0.4" />
+              <circle cx="82" cy="50" r="2" fill="#60a5fa" />
+              <rect x="52" y="49" width="24" height="2" rx="1" fill="#ffffff" />
             </svg>
           </div>
           <div className="project-details">
             <div className="project-header-row">
-              <span className="project-title">NiftyBull</span>
-              <span className="project-tag">Trading</span>
+              <span className="project-title">Gupshup</span>
+              <span className="project-tag">WebSockets</span>
             </div>
             <p className="project-desc">
-              Trading application with live candlestick charts and low-latency execution.
+              Real-time chat via Turborepo with 3 independent scaling microservices.
+            </p>
+          </div>
+          <div className="project-arrow-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </div>
+        </a>
+
+        {/* Project 3: PayNow */}
+        <a
+          href="https://github.com/ayupandey12/Paynow"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-row"
+        >
+          <div className="project-img-container">
+            {/* SVG: PayNow card transaction in dark theme */}
+            <svg width="110" height="72" viewBox="0 0 110 72" fill="none">
+              <rect width="110" height="72" fill="#0c0a09" />
+              {/* Bank card structure */}
+              <rect x="15" y="16" width="80" height="40" rx="4" fill="#292524" stroke="#44403c" strokeWidth="1" />
+              {/* Card details */}
+              <rect x="22" y="22" width="14" height="9" rx="1" fill="#f59e0b" />
+              <rect x="22" y="42" width="35" height="2" rx="1" fill="#d6d3d1" />
+              <circle cx="70" cy="36" r="6" fill="#ef4444" fillOpacity="0.8" />
+              <circle cx="78" cy="36" r="6" fill="#eab308" fillOpacity="0.8" />
+            </svg>
+          </div>
+          <div className="project-details">
+            <div className="project-header-row">
+              <span className="project-title">PayNow</span>
+              <span className="project-tag">Fintech</span>
+            </div>
+            <p className="project-desc">
+              Dockerized fintech wallet. Ensured transactional ACID compliance.
+            </p>
+          </div>
+          <div className="project-arrow-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </div>
+        </a>
+
+        {/* Project 4: Kojoy */}
+        <a
+          href="https://www.kojoyappliances.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-row"
+        >
+          <div className="project-img-container">
+            {/* SVG: Storefront mockup for Kojoy */}
+            <svg width="110" height="72" viewBox="0 0 110 72" fill="none">
+              <rect width="110" height="72" fill="#fcfaf7" />
+              <rect x="0" y="0" width="110" height="72" stroke="#111" strokeWidth="1" />
+              <rect x="8" y="8" width="94" height="12" fill="#111" />
+              {/* Home Icon shape */}
+              <rect x="15" y="32" width="22" height="26" rx="2" fill="#ea580c" />
+              <polygon points="15,38 26,27 37,38" fill="#ea580c" />
+              {/* Gear / Appliances blocks */}
+              <circle cx="70" cy="38" r="6" stroke="#111" strokeWidth="1.5" />
+              <circle cx="70" cy="38" r="2" fill="#111" />
+              <rect x="58" y="52" width="36" height="4" rx="1" fill="#4b5563" />
+            </svg>
+          </div>
+          <div className="project-details">
+            <div className="project-header-row">
+              <span className="project-title">Kojoy</span>
+              <span className="project-tag">SEO / Web</span>
+            </div>
+            <p className="project-desc">
+              Deployed a business landing site, resulting in 30% search traffic growth.
             </p>
           </div>
           <div className="project-arrow-btn">
@@ -404,14 +403,20 @@ export default function Home() {
         </a>
       </section>
 
-      {/* TICKER MARQUEE */}
-      <div className="marquee-container">
+      {/* TICKER MARQUEE AS CLICKABLE LINK */}
+      <a
+        href="https://github.com/ayupandey12?tab=repositories"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="marquee-container"
+        aria-label="View all other interesting projects on GitHub"
+      >
         <div className="marquee-track">
           <span className="marquee-text">
             CHECK OUT MORE INTERESTING PROJECTS <span className="marquee-dot">•</span> CHECK OUT MORE INTERESTING PROJECTS <span className="marquee-dot">•</span> CHECK OUT MORE INTERESTING PROJECTS <span className="marquee-dot">•</span> CHECK OUT MORE INTERESTING PROJECTS <span className="marquee-dot">•</span> CHECK OUT MORE INTERESTING PROJECTS <span className="marquee-dot">•</span>
           </span>
         </div>
-      </div>
+      </a>
 
       {/* EXPERIENCE SECTION */}
       <section className="section-wrapper">
@@ -609,7 +614,7 @@ export default function Home() {
         <h2 className="section-heading">LET&apos;S MAKE IT HAPPEN</h2>
         <p className="contact-desc">
           Got a project, job opportunity or just want to chat? Shoot me an email at{" "}
-          <a href="mailto:ayushpandey8020@gmail.com">ayushpandey8020@gmail.com</a>{" "}
+          <a href="mailto:ayushpandey9802@gmail.com">ayushpandey9802@gmail.com</a>{" "}
           or drop a message below.
         </p>
 

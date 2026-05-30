@@ -2,7 +2,7 @@
   --font-space-grotesk: var(--font-space-grotesk), "Space Grotesk", -apple-system, sans-serif;
   --font-inter: var(--font-inter), "Inter", -apple-system, sans-serif;
 
-  --bg-outer: #064e3b;
+  --bg-outer: #ebeae5;
   --bg-card: #ffffff;
   --text-main: #111111;
   --text-muted: #666666;
@@ -10,7 +10,7 @@
   --bg-light: #f9f9f9;
   --bg-dark-section: #000000;
   
-  --shadow-main: 0 25px 60px rgba(0, 0, 0, 0.35);
+  --shadow-main: 0 25px 60px rgba(0, 0, 0, 0.12);
   --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -32,6 +32,7 @@ html, body {
   padding: 3.5rem 1.25rem;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease;
 }
 
 /* Entry Animation for Portfolio Card */
@@ -175,6 +176,30 @@ html, body {
   margin-top: 1rem;
 }
 
+.hero-contact-row {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: var(--font-space-grotesk);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.hero-contact-row a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1.5px solid transparent;
+}
+.hero-contact-row a:hover {
+  color: var(--bg-outer);
+  border-bottom-color: var(--bg-outer);
+}
+.dot-sep {
+  color: #dddddd;
+}
+
 /* Socials Grid */
 .socials-grid {
   display: grid;
@@ -205,7 +230,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: var(--bg-outer);
+  background-color: var(--border-dark);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -223,7 +248,7 @@ html, body {
 }
 .social-link:hover svg {
   transform: translateY(-2px) scale(1.12);
-  color: var(--bg-outer);
+  color: var(--border-dark);
 }
 
 /* Project Row List */
@@ -232,19 +257,20 @@ html, body {
   flex-direction: column;
 }
 
-/* Localization "Sliding Dark Mode" on Project hover */
+/* Expanded classic spacing for projects row */
 .project-row {
   display: grid;
-  grid-template-columns: 96px 1fr auto;
-  gap: 1.25rem;
+  grid-template-columns: 110px 1fr auto;
+  gap: 1.5rem;
   align-items: center;
-  padding: 1.25rem 1.75rem;
+  padding: 1.85rem 2rem;
   border-bottom: 1.5px solid var(--border-dark);
   text-decoration: none;
   color: inherit;
   background-color: #ffffff;
   position: relative;
   overflow: hidden;
+  min-height: 125px;
   transition: background-color 0.3s ease;
 }
 
@@ -276,10 +302,10 @@ html, body {
 }
 
 .project-img-container {
-  width: 96px;
-  height: 64px;
+  width: 110px;
+  height: 72px;
   border-radius: 8px;
-  border: 1px solid var(--border-dark);
+  border: 1.5px solid var(--border-dark);
   overflow: hidden;
   background-color: #eaeaea;
   display: flex;
@@ -308,7 +334,7 @@ html, body {
 
 .project-title {
   font-family: var(--font-space-grotesk);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-main);
   transition: color 0.3s ease;
@@ -320,13 +346,13 @@ html, body {
 
 .project-tag {
   font-family: var(--font-space-grotesk);
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   font-weight: 500;
   text-transform: uppercase;
   color: var(--text-muted);
   border: 1px solid #d1d5db;
   border-radius: 99px;
-  padding: 1px 6px;
+  padding: 1px 7px;
   letter-spacing: 0.02em;
   transition: all 0.3s ease;
 }
@@ -337,8 +363,8 @@ html, body {
 }
 
 .project-desc {
-  font-size: 0.75rem;
-  line-height: 1.35;
+  font-size: 0.78rem;
+  line-height: 1.4;
   color: var(--text-muted);
   transition: color 0.3s ease;
 }
@@ -368,14 +394,20 @@ html, body {
   border-color: #ffffff;
 }
 
-/* Marquee Ticker */
+/* Marquee Ticker - Clickable */
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
   border-bottom: 1.5px solid var(--border-dark);
   background-color: #ffffff;
-  padding: 0.75rem 0;
+  padding: 0.85rem 0;
   display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.marquee-container:hover {
+  background-color: #fafafa;
 }
 .marquee-track {
   display: inline-block;
@@ -384,11 +416,16 @@ html, body {
 }
 .marquee-text {
   font-family: var(--font-space-grotesk);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-main);
+  transition: color 0.2s ease;
+}
+.marquee-container:hover .marquee-text {
+  color: #000000;
+  text-shadow: 0 1px 0.5px rgba(0,0,0,0.1);
 }
 .marquee-dot {
   margin: 0 1rem;
@@ -401,7 +438,7 @@ html, body {
 
 /* Content Sections */
 .section-wrapper {
-  padding: 2rem 2.25rem;
+  padding: 2.25rem;
   border-bottom: 1.5px solid var(--border-dark);
 }
 .section-wrapper:last-child {
@@ -418,7 +455,7 @@ html, body {
 }
 .section-heading {
   font-family: var(--font-space-grotesk);
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: 1.25rem;
@@ -446,7 +483,7 @@ html, body {
   transition: background-color 0.2s ease;
 }
 .experience-item:hover .experience-marker {
-  background-color: var(--bg-outer);
+  background-color: var(--border-dark);
 }
 .experience-item::before {
   content: "";
