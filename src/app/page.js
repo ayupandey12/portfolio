@@ -210,7 +210,7 @@ export default function Home() {
           </svg>
         </a>
         <a
-          href="https://leetcode.com/u/Anonymous_x101/"
+          href="https://leetcode.com/u/Anonymous_x1012/"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
